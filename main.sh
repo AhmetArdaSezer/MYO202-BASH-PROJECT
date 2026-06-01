@@ -19,8 +19,8 @@ echo -e "\n[Anakart]" >> report.log
 wmic baseboard get product,Manufacturer >> report.log 2>/dev/null
 echo -e "\n[Anakart UUID]" >> report.log
 wmic csproduct get uuid >> report.log 2>/dev/null
-echo -e "\n[Disk Bilgisi]" >> report.log
-wmic diskdrive get model,mediatype >> report.log 2>/dev/null
+echo -e "\n[Disk Marka, Model, Seri No ve Kapasite]" >> report.log
+wmic diskdrive get model,serialnumber,size >> report.log 2>/dev/null
 echo -e "\n[MAC Adresi]" >> report.log
 getmac >> report.log 2>/dev/null
 
